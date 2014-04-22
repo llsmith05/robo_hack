@@ -18,9 +18,35 @@
 	<div class="well">
 	  <div align="center">
 	    <h1>Robot Hackathon: Hexagon</h1>
+      main:<br>
+      pause 100<br>
+      let b1 = 0<br>
+      DO<br>
+        ;forward<br>
+        high b.6<br>
+        high b.4<br>
+        low b.7<br>
+        low b.5<br>
+        pause 1000<br>
+        <br>
+        ;right turn 1<br>
+        high b.7<br>
+        high b.4<br>
+        low b.5<br>
+        low b.6<br>
+        pause 210<br>
+        <br>
+        inc b1<br>
+      LOOP WHILE b1 < 6<br>
+      <br>
+      ;halt<br>
+      low b.4<br>
+      low b.5<br>
+      low b.6<br>
+      low b.7<br>
 	  </div>
 	</div>
-	CODE HERE
+	
 	 
       </div>
     </div>

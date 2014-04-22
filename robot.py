@@ -28,9 +28,9 @@ def View():
 	elif trick == "hexagon":
 		return render_template('hexagon.html')
 	elif trick == "trick":
-		return render_template('trick.html')
+		return render_template('first_trick.html')
 	elif trick == "trick2":
-		return render_template('trick2.html')
+		return render_template('second_trick.html')
 	else:
 		return render_template('main.html')
 
