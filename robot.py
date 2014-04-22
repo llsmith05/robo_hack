@@ -9,7 +9,7 @@ app = Flask(__name__)
 def hello_world():
     return 'Robot - Rapid Prototyping 2014!'
 
-@app.route('/robot/main')
+@app.route('/main')
 def hello(name=None):
 	return render_template('main.html')
 
