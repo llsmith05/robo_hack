@@ -7,7 +7,7 @@
     <title>Robot Code</title>
     
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
     
   </head>
   <body>
@@ -18,10 +18,7 @@
 	<div class="well">
 	  <div align="center">
 	    <h1>Robot Hackathon: First Trick</h1>
-	  </div>
-	</div>
-
-	main: <br>
+	    main: <br>
 	pause 100 <br>
 	
 	;right turn <br>
@@ -85,6 +82,10 @@
 	low b.6 <br>
 	low b.5 <br>
 	low b.7
+	  </div>
+	</div>
+
+	
  
       </div>
     </div>
