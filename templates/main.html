@@ -36,18 +36,24 @@
     $(document).keydown(function() {
       if (event.keyCode == 87) {
         $("input#trick").val("square");
-        $("input#distance").focus();
       }
       if (event.keyCode == 65) {
         $("input#trick").val("hexagon");
-        $("input#distance").focus();
       };
       if (event.keyCode == 83) {
         $("input#trick").val("trick");
-        $("input#distance").focus();
+      };
+      if (event.keyCode == 49) {
+        $("input#distance").val(1);
+      };
+      if (event.keyCode == 50) {
+        $("input#distance").val(2);
+      };
+      if (event.keyCode == 51) {
+        $("input#distance").val(3);
       };
       if (event.keyCode == 13) {
-        $("input.submit").click();
+        $("input#submit").trigger('click');
       };
     });
     </script>
