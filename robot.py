@@ -34,6 +34,12 @@ def View():
 	else:
 		return render_template('main.html')
 
+@app.route('/fancytrick', methods=['GET'])
+def Trick():
+	direction = request.args.get('dir', '')
+	spintime = request.args.get('time', '')
+	return render_template('fancytrick.html', direction=direction, spintime=spintime)
+
 if __name__ == '__main__':
 	app.debug = True
 	app.run()

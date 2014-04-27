@@ -7,7 +7,7 @@
     <title>Robot Code</title>
     
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
     
   </head>
   <body>
@@ -19,10 +19,10 @@
 	  <div align="center">
 	    <h1>Robot Hackathon</h1>
 	
-	    <form action="demo_form_method.asp" method="get" target="_blank">
-	      1. Type of Robot Move: <input type="text" trick="trick"><br>
-	      2. Distance: <input type="text" distance="x"><br>
-	      <input type="submit" value="Submit">
+	    <form action="view" method="get" target="_blank">
+	      1. Type of Robot Move: <input id="trick" type="text" name="trick"><br>
+	      2. Distance: <input id="distance" type="number" name="x"><br>
+	      <input id="submit" type="submit" value="Submit">
 	    </form>
 
 
@@ -31,6 +31,26 @@
 
       </div>
     </div>
+    <script src="{{ url_for('static', filename='jquery-1.9.1.min.js') }}"></script>
+    <script type="text/javascript">
+    $(document).keydown(function() {
+      if (event.keyCode == 87) {
+        $("input#trick").val("square");
+        $("input#distance").focus();
+      }
+      if (event.keyCode == 65) {
+        $("input#trick").val("hexagon");
+        $("input#distance").focus();
+      };
+      if (event.keyCode == 83) {
+        $("input#trick").val("trick");
+        $("input#distance").focus();
+      };
+      if (event.keyCode == 13) {
+        $("input.submit").click();
+      };
+    });
+    </script>
   </body>
 
 </html>
